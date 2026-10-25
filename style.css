@@ -1,0 +1,197 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f4f6fa;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px max(5%, calc((100% - 1080px) / 2));
+  background: #14213d;
+  color: white;
+}
+
+.brand {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.topbar span {
+  color: #d6deee;
+  font-size: 14px;
+}
+
+.container {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 48px 0 28px;
+}
+
+.eyebrow {
+  color: #2456a6;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 8px 0 14px;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.15;
+}
+
+.subtitle, .muted {
+  color: #657086;
+}
+
+.subtitle {
+  max-width: 650px;
+}
+
+.calculator {
+  max-width: 560px;
+  margin: 12px auto 42px;
+  padding: 28px;
+  background: white;
+  border: 1px solid #dfe4ed;
+  border-radius: 12px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd3e0;
+  border-radius: 6px;
+  background: white;
+  color: #172033;
+  font: inherit;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #2456a6;
+  outline-offset: 2px;
+}
+
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 13px;
+  border: 0;
+  border-radius: 6px;
+  background: #2456a6;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #193f80;
+}
+
+.result {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #edf3fc;
+  overflow-wrap: anywhere;
+}
+
+.result p {
+  margin-bottom: 0;
+}
+
+.result-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #193f80;
+}
+
+.concepts {
+  padding: 12px 0 40px;
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.concept-grid article {
+  padding: 18px;
+  background: white;
+  border: 1px solid #dfe4ed;
+  border-radius: 8px;
+}
+
+.concept-grid h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.concept-grid p {
+  margin: 0;
+  color: #657086;
+  font-size: 14px;
+}
+
+footer {
+  padding: 24px 0;
+  border-top: 1px solid #dfe4ed;
+  color: #657086;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer p {
+  margin: 4px;
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro {
+    padding-top: 32px;
+  }
+
+  .calculator {
+    padding: 20px;
+  }
+
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+}

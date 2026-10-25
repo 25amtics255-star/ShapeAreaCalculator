@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shape Area Calculator | Java OOP Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Shape Calculator</a>
+    <span>Java OOP Mini Project</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">JAVA PROGRAMMING PROJECT</p>
+      <h1>Abstract Classes &amp;<br>Abstract Methods in Java</h1>
+      <p class="subtitle">
+        Explore abstraction, inheritance, method overriding,
+        and runtime polymorphism with an interactive area calculator.
+      </p>
+    </section>
+
+    <section class="calculator">
+      <h2>Shape Area Calculator</h2>
+      <p class="muted">Choose a shape and enter its dimensions.</p>
+
+      <form id="areaForm">
+        <label for="shape">Select shape</label>
+        <select id="shape">
+          <option value="circle">Circle</option>
+          <option value="rectangle">Rectangle</option>
+        </select>
+
+        <label for="color">Shape color</label>
+        <input id="color" type="text" value="Red"
+               maxlength="30" required>
+
+        <div id="radiusGroup">
+          <label for="radius">Radius</label>
+          <input id="radius" type="number" min="0.000001"
+                 step="any" placeholder="Enter radius" required>
+        </div>
+
+        <div id="rectangleGroup" hidden>
+          <label for="length">Length</label>
+          <input id="length" type="number" min="0.000001"
+                 step="any" placeholder="Enter length" disabled>
+
+          <label for="width">Width</label>
+          <input id="width" type="number" min="0.000001"
+                 step="any" placeholder="Enter width" disabled>
+        </div>
+
+        <button type="submit">Calculate Area</button>
+      </form>
+
+      <div id="result" class="result" aria-live="polite">
+        <span class="muted">YOUR RESULT</span>
+        <p>Enter dimensions to calculate the area.</p>
+      </div>
+    </section>
+
+    <section class="concepts">
+      <h2>Java concepts demonstrated</h2>
+      <div class="concept-grid">
+        <article>
+          <h3>Abstraction</h3>
+          <p>Shape defines the common structure and abstract method.</p>
+        </article>
+        <article>
+          <h3>Inheritance</h3>
+          <p>Circle and Rectangle extend the Shape class.</p>
+        </article>
+        <article>
+          <h3>Method Overriding</h3>
+          <p>Each subclass implements calculateArea() differently.</p>
+        </article>
+        <article>
+          <h3>Polymorphism</h3>
+          <p>A Shape reference can refer to different shape objects.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Java Programming Project · Shape Area Calculator</p>
+      <p>Built to demonstrate Object-Oriented Programming</p>
+    </footer>
+  </main>
+</body>
+</html>
